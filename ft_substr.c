@@ -3,36 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yooshima <yooshima@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:03:44 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/23 16:23:09 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:08:57 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "libft.h"
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
-	unsigned int i;
+	char			*substr;
+	unsigned int	i;
 
-	if(strlen(s) <= start || len == 0)
+	if (strlen(s) <= start || len == 0)
 	{
 		substr = (char *)malloc(1);
-		if(substr == NULL)
+		if (substr == NULL)
 			return (NULL);
 		*substr = 0;
 	}
 	else
 	{
 		substr = (char *)malloc((len - start + 1) * sizeof(char));
-		if(substr == NULL)
+		if (substr == NULL)
 			return (NULL);
 		i = 0;
-		while(start + i < len)
+		while (start + i < len)
 		{
 			substr[i] = s[start + i];
 			i++;
@@ -42,14 +43,12 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-int main(void)
-{
-	char str[] = "abcdefgh";
-	unsigned int set = 2;
-	size_t str_len = strlen(str);
-	char *value = ft_substr(str, set, strlen(str));
-
-	printf("%s\n", value);
-	free(value);
-	
-}
+// int main(void)
+// {
+// 	char str[] = "abcdefgh";
+// 	unsigned int set = 2;
+// 	size_t str_len = strlen(str);
+// 	char *value = ft_substr(str, set, strlen(str));
+// 	printf("%s\n", value);
+// 	free(value);
+// }

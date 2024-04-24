@@ -6,12 +6,13 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 12:15:38 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/17 12:37:43 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/24 14:48:50 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -25,9 +26,9 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-int	main(void)
-{
-	char a[] = "aa ~+NULLa!\aa";
-	printf("or = %lu\n", strlen(a));
-	printf("ft = %lu\n", ft_strlen(a));
-}
+// int	main(void)
+// {
+// 	char a[] = "aa ~+NULLa!\aa";
+// 	printf("or = %lu\n", strlen(a));
+// 	printf("ft = %lu\n", ft_strlen(a));
+// }

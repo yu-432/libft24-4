@@ -6,17 +6,17 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:41:09 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/17 16:17:04 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:06:16 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
 //エラー処理が必要？？strlenがどちらかの文字列の長さ(\0含む)を超えた場合
 //https://hikotech.net/post-100/
 //check it
-
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -35,15 +35,13 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	return (dest);
 }
 
-int main(void)
-{
-	int n = 3;
-
-	char or_dest[] = "abcdef";
-	// char or_src[] = "bbbbbbbb";
-	printf("or_dest = %s\n", memmove(or_dest + 2, or_dest, n));
-
-	char ft_dest[] = "abcdef";
-	// char ft_src[] = "bbbbbbbb";
-	printf("ft_dest = %s\n", ft_memmove(ft_dest + 2, ft_dest, n));
-}
+// int main(void)
+// {
+// 	int n = 3;
+// 	char or_dest[] = "abcdef";
+// 	// char or_src[] = "bbbbbbbb";
+// 	printf("or_dest = %s\n", memmove(or_dest + 2, or_dest, n));
+// 	char ft_dest[] = "abcdef";
+// 	// char ft_src[] = "bbbbbbbb";
+// 	printf("ft_dest = %s\n", ft_memmove(ft_dest + 2, ft_dest, n));
+// }
