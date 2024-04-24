@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/16 12:15:38 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/17 12:37:43 by yooshima         ###   ########.fr       */
+/*   Created: 2024/04/17 15:37:34 by yooshima          #+#    #+#             */
+/*   Updated: 2024/04/17 16:05:50 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
+	if (*s == c)
+		return (s);
 	while (*s)
 	{
-		i++;
 		s++;
+		if (*s == c)
+			return (s);
 	}
-	return (i);
-}
-int	main(void)
-{
-	char a[] = "aa ~+NULLa!\aa";
-	printf("or = %lu\n", strlen(a));
-	printf("ft = %lu\n", ft_strlen(a));
+	return (NULL);
 }
