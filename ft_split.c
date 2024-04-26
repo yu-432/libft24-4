@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/25 19:31:00 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/26 18:23:13 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ char	**ft_split(char const *s, char c)
 	int		start;
 	int		index;
 
-	result = (char **)malloc((count_index(s, c)) * sizeof(char *));
+	result = (char **)malloc((count_index(s, c) + 1) * sizeof(char *));
 	if (result == NULL)
 		return (NULL);
 	i = 0;
 	start = 0;
 	index = 0;
-	while (index < (count_index(s, c) + 1))
+	while (index < (count_index(s, c)))
 	{
 		if (s[i] == c || s[i] == '\0')
 		{
@@ -52,18 +52,18 @@ char	**ft_split(char const *s, char c)
 		}
 		i++;
 	}
-	result[index++] = ft_substr(NULL, 0, 1);
+	result[index] = NULL;
 	return (result);
 }
 
-int	main(void)
-{
-	char *s = "Hello,World,Foo,,Bar";
-	char c = ',';
-	char **res;
+// int	main(void)
+// {
+// 	char *s = ",,,Hello,,,,World,Foo,Bar";
+// 	char c = ',';
+// 	char **res;
 
-	res = ft_split(s, c);
-	for (int i = 0; i < count_index(s, c) + 1; i++)
-		printf("%s\n", res[i]);
-}
+// 	res = ft_split(s, c);
+// 	for (int i = 0; i < count_index(s, c) + 1; i++)
+// 		printf("%s\n", res[i]);
+// }
 //strchr
