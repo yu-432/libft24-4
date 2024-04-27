@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:03:57 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 17:06:27 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/27 16:33:20 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 	str = (char *)s;
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == (unsigned char)c)
 			return (str);
 		str++;
 	}
@@ -33,7 +33,7 @@ char	*ft_strchr(const char *s, int c)
 // int main(void)
 // {
 // 	char str1[] = "abcdefg";
-// 	int find = 'c';
-// 	printf("%s\n", strchr(str1, find));
-// 	printf("%s\n", ft_strchr(str1, find));
+// 	int find = 'c' + 256;
+// 	printf("or = %s\n", strchr(str1, find));
+// 	printf("ft = %s\n", ft_strchr(str1, find));
 // }

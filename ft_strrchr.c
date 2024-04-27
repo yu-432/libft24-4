@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 16:43:05 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 14:51:57 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/27 16:34:46 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 		str++;
 	while (1)
 	{
-		if (*str == c)
+		if (*str == (unsigned char)c)
 			return (str);
 		if (str == s)
 			break ;
