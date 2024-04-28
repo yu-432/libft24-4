@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/26 18:23:13 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/28 15:37:35 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char	**ft_split(char const *s, char c)
 		if (s[i] == c || s[i] == '\0')
 		{
 			result[index++] = ft_substr(s, start, i);
+			// if (result[index] == NULL)
+			// 	free(result, index);
 			start = i + 1;
 		}
 		i++;
