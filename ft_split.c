@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/28 15:37:35 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/28 19:00:16 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,64 @@
 #include <stdlib.h>
 #include "libft.h"
 
-static int	count_index(char const *s, char c)
+char	*ft_strndup(const char *s1, int len)
 {
-	int	i;
+	char	*s_cpy;
+
+	s_cpy = (char *)malloc((len + 1) * sizeof(char));
+	if (s_cpy == NULL)
+		return (NULL);
+	if (len > 0)
+		ft_memcpy(s_cpy, s1, len);
+	s_cpy[len] = '\0';
+	return (s_cpy);
+}
+
+int	count_words(const char *s, char c)
+{
+	int	flag;
 	int	count;
 
-	i = 0;
+	flag = 1;
 	count = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s == c)
+			flag = 1;
+		else if (flag == 1)
+		{
 			count++;
-		i++;
+			flag = 0;
+		}
+		s++;
 	}
-	return (count + 1);
+	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		i;
-	int		start;
 	int		index;
+	int		i;
+	int		j;
 
-	result = (char **)malloc((count_index(s, c) + 1) * sizeof(char *));
-	if (result == NULL)
+	result = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
+	if (!result)
 		return (NULL);
-	i = 0;
-	start = 0;
 	index = 0;
-	while (index < (count_index(s, c)))
+	i = 0;
+	while (index < count_words(s, c))
 	{
-		if (s[i] == c || s[i] == '\0')
+		if (s[i] == c)
+			i++;
+		else
 		{
-			result[index++] = ft_substr(s, start, i);
-			// if (result[index] == NULL)
-			// 	free(result, index);
-			start = i + 1;
+			j = 0;
+			while (s[i + j] != c && s[i + j] != '\0')
+				j++;
+			result[index++] = ft_strndup(&s[i], j);
+			i += j;
 		}
-		i++;
 	}
 	result[index] = NULL;
 	return (result);
@@ -60,12 +79,23 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char *s = ",,,Hello,,,,World,Foo,Bar";
+// 	char *s = "hello,world,42,tokyo";
+// 	char *t = ",,,hello,,,world,,,42,,,tokyo,,,,";
+// 	char *r = "hello,world,42,tokyo";
 // 	char c = ',';
+// 	char c1 = ' ';
 // 	char **res;
 
 // 	res = ft_split(s, c);
-// 	for (int i = 0; i < count_index(s, c) + 1; i++)
+// 	printf("%d\n", count_words(s, c));
+// 	for (int i = 0; i < count_words(s, c) + 1; i++)
+// 		printf("%s\n", res[i]);
+	
+// 	res = ft_split(t, c);
+// 	for (int i = 0; i < count_words(t, c) + 1; i++)
+// 		printf("%s\n", res[i]);
+
+// 	res = ft_split(r, c1);
+// 	for (int i = 0; i < count_words(r, c1) + 1; i++)
 // 		printf("%s\n", res[i]);
 // }
-//strchr

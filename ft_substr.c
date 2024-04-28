@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:03:44 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 17:08:57 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/28 16:44:39 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,20 +20,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char			*substr;
 	unsigned int	i;
 
-	if (strlen(s) <= start || len == 0)
+	if (ft_strlen(s) <= start || len == 0)
 	{
 		substr = (char *)malloc(1);
 		if (substr == NULL)
 			return (NULL);
-		*substr = 0;
+		*substr = '\0';
 	}
 	else
 	{
-		substr = (char *)malloc((len - start + 1) * sizeof(char));
+		substr = (char *)malloc((len + 1) * sizeof(char));
 		if (substr == NULL)
 			return (NULL);
 		i = 0;
-		while (start + i < len)
+		while (i < len)
 		{
 			substr[i] = s[start + i];
 			i++;
@@ -45,10 +45,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int main(void)
 // {
-// 	char str[] = "abcdefgh";
+// 	char str[] = "Hello-42-Tokyo";
 // 	unsigned int set = 2;
 // 	size_t str_len = strlen(str);
-// 	char *value = ft_substr(str, set, strlen(str));
+// 	char *value = ft_substr(str, 5, 5);
 // 	printf("%s\n", value);
 // 	free(value);
 // }

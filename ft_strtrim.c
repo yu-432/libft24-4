@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:38:52 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 17:08:29 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/28 17:38:23 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,51 @@
 #include <stdio.h>
 #include "libft.h"
 
-int	yoo_strhit(char *s, int c)
+int	char_mach_head(char *s, int c)
 {
-	char	*str;
-
-	str = (char *)s;
-	while (*str)
+	while (*s)
 	{
-		if (*str == c)
+		if (*s == c)
 			return (1);
-		str++;
+		s++;
 	}
+	return (0);
+}
+
+int	char_mach_end(char *s, int c)
+{
+	int	len;
+
+	len = ft_strlen(s);
+	while (len--)
+		if (s[len] == c)
+			return (1);
 	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	head;
-	size_t	end;
+	int		head;
+	int		end;
 	char	*value;
 
 	head = 0;
-	while (yoo_strhit((char *)set, s1[head]))
+	while (char_mach_head((char *)set, s1[head]))
 		head++;
 	end = strlen(s1);
-	while (yoo_strhit((char *)set, s1[end - 1]))
+	while (char_mach_end((char *)set, s1[end - 1]))
 		end--;
-	value = (char *)malloc((end - head) * sizeof(char));
+	value = (char *)malloc((end - head + 1) * sizeof(char));
 	if (value == NULL)
 		return (NULL);
+	ft_memcpy(value, s1 + head, end - head);
+	value[end - head] = '\0';
 	return (value);
 }
 
 // int main(void)
 // {
-// 	char str[] = "abcdefabc";
-// 	char trim[] = "abc";
+// 	char str[] = "Hello World";
+// 	char trim[] = "World";
 // 	printf("%s\n", ft_strtrim(str, trim));
 // }
