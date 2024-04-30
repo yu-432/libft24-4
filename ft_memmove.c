@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:41:09 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/27 10:42:22 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/30 16:59:48 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	str1 = dest;
 	str2 = (char *)src;
-
+	if (str1 == NULL && str2 == NULL)
+		return (NULL);
 	if (dest > src)
 		while (len--)
 			str1[len] = str2[len];
@@ -42,9 +43,9 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 // {
 // 	size_t n = 4;
 // 	char or_dest[] = "abcdef";
-// 	// char or_src[] = "bbbbbbbb";
-// 	printf("or_dest = %s\n", memmove(or_dest + 1, or_dest, n));
+// 	char or_src[] = "bbbbbbbb";
+// 	printf("or_dest = %s\n", memmove(NULL, or_src, n));
 // 	char ft_dest[] = "abcdef";
-// 	// char ft_src[] = "bbbbbbbb";
-// 	printf("ft_dest = %s\n", ft_memmove(ft_dest + 1, ft_dest, n));
+// 	char ft_src[] = "bbbbbbbb";
+// 	printf("ft_dest = %s\n", ft_memmove(NULL, ft_src, n));
 // }

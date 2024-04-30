@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 13:12:55 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 15:15:58 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/04/30 17:50:04 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // {
 // 	free(content);
 // }
-
-
 // int main(void)
 // {
 // 	t_list *p;
