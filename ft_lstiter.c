@@ -1,43 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 14:42:16 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:07:45 by yooshima         ###   ########.fr       */
+/*   Created: 2024/04/30 14:38:17 by yooshima          #+#    #+#             */
+/*   Updated: 2024/04/30 14:50:12 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	count;
-
-	if (!lst)
-		return (0);
-	count = 1;
+	if (lst == NULL)
+		return ;
 	while (1)
 	{
+		f(lst);
 		if (lst -> next == NULL)
 			break ;
-		count++;
 		lst = lst -> next;
 	}
-	return (count);
 }
 
-// int	main(void)
+// void	f(void *lst)
+// {
+// 	t_list	*list;
+
+// 	list = lst;
+// 	list -> content = "xxx";
+// }
+
+// int main(void)
 // {
 // 	t_list *p;
 // 	t_list *pp;
 // 	t_list *ppp;
-// 	char *data1 = "abc";
-// 	char *data2 = "def";
-// 	char *data3 = "ghi";
+// 	t_list *add;
+// 	char *data1 = ft_strdup("abc");
+// 	char *data2 = ft_strdup("def");
+// 	char *data3 = ft_strdup("ghi");
 
 // 	p = ft_lstnew(data1);
 
@@ -47,10 +52,11 @@ int	ft_lstsize(t_list *lst)
 // 	ppp = ft_lstnew(data3);
 // 	ft_lstadd_front(&p, ppp);
 
+// 	ft_lstiter(p, f);
 // 	for(int i = 0; i < 3; i++)
 // 	{
 // 		printf("%s\n", p -> content);
 // 		p = p -> next;
+
 // 	}
 // }
-

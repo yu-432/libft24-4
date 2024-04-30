@@ -1,43 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 14:42:16 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:07:45 by yooshima         ###   ########.fr       */
+/*   Created: 2024/04/30 13:12:55 by yooshima          #+#    #+#             */
+/*   Updated: 2024/04/30 15:15:58 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	count;
+	t_list	*temp;
+	t_list	*node;
 
-	if (!lst)
-		return (0);
-	count = 1;
+	if (*lst == NULL)
+		return ;
+	node = *lst;
 	while (1)
 	{
-		if (lst -> next == NULL)
+		temp = node -> next;
+		ft_lstdelone(node, del);
+		if (temp == NULL)
 			break ;
-		count++;
-		lst = lst -> next;
+		node = temp;
 	}
-	return (count);
+	*lst = NULL;
 }
 
-// int	main(void)
+// void	del(void *content)
+// {
+// 	free(content);
+// }
+
+
+// int main(void)
 // {
 // 	t_list *p;
 // 	t_list *pp;
 // 	t_list *ppp;
-// 	char *data1 = "abc";
-// 	char *data2 = "def";
-// 	char *data3 = "ghi";
+// 	t_list *add;
+// 	char *data1 = ft_strdup("abc");
+// 	char *data2 = ft_strdup("def");
+// 	char *data3 = ft_strdup("ghi");
 
 // 	p = ft_lstnew(data1);
 
@@ -47,10 +56,7 @@ int	ft_lstsize(t_list *lst)
 // 	ppp = ft_lstnew(data3);
 // 	ft_lstadd_front(&p, ppp);
 
-// 	for(int i = 0; i < 3; i++)
-// 	{
-// 		printf("%s\n", p -> content);
-// 		p = p -> next;
-// 	}
+// 	ft_lstclear(&p, del);
+// 	if(p == NULL)
+// 		printf("OK\n");
 // }
-
