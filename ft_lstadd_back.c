@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 14:42:16 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 12:01:08 by yooshima         ###   ########.fr       */
+/*   Created: 2024/04/30 10:49:46 by yooshima          #+#    #+#             */
+/*   Updated: 2024/04/30 12:10:58 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	int	count;
+	t_list	*temp;
 
-	if(!lst)
-		return (0);
-	count = 1;
-	while (1)
+	if (*lst == NULL)
+		*lst = new;
+	else
 	{
-		if (lst -> next == NULL)
-			break ;
-		count++;
-		lst = lst -> next;
+		temp = *lst;
+		while (temp -> next != NULL)
+			temp = temp -> next;
+		temp -> next = new;
 	}
-	return (count);
 }
 
-// int	main(void)
+// int main(void)
 // {
 // 	t_list *p;
 // 	t_list *pp;
 // 	t_list *ppp;
+// 	t_list *add;
 // 	char *data1 = "abc";
 // 	char *data2 = "def";
 // 	char *data3 = "ghi";
+// 	char *data4 = "zzz";
 
 // 	p = ft_lstnew(data1);
 
@@ -47,10 +47,12 @@ int	ft_lstsize(t_list *lst)
 // 	ppp = ft_lstnew(data3);
 // 	ft_lstadd_front(&p, ppp);
 
-// 	for(int i = 0; i < 3; i++)
+// 	add = ft_lstnew(data4);
+// 	t_list *last = ft_lstlast(p);
+// 	ft_lstadd_back(&last, add);
+// 	for(int i = 0; i < 4; i++)
 // 	{
 // 		printf("%s\n", p -> content);
 // 		p = p -> next;
 // 	}
 // }
-
