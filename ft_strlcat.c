@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:39:11 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/27 15:53:33 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 12:29:51 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,39 +19,35 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dst_len;
 	size_t	src_len;
-	size_t	result;
-	int		j;
+	size_t	i;
 
 	src_len = ft_strlen(src);
-	if (dst == NULL || dstsize == 0)
+	if (dstsize == 0)
 		return (src_len);
 	dst_len = ft_strlen(dst);
-	j = 0;
-	if (dstsize > dst_len)
-		result = src_len + dst_len;
-	else
-		result = src_len + dstsize;
-	while (dst_len + j < dstsize - 1)
+	i = 0;
+	if (dstsize <= dst_len)
+		return (src_len + dstsize);
+	while (i < dstsize - dst_len - 1 && src[i])
 	{
-		dst[dst_len + j] = src[j];
-		j++;
-		if (src[j] == '\0')
-			break ;
+		dst[dst_len + i] = src[i];
+		i++;
 	}
-	dst[dst_len + j] = '\0';
-	return (result);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
 
 // int main(void)
 // {
-// 	char or_s1[10] = "";
-// 	char ft_s1[10] = "";
+// 	char or_s1[10] = "aaa";
+// 	char ft_s1[10] = "aaa";
 
 // 	char s2[] = "bbbbb";
-// 	size_t len = 10;
+// 	size_t len = 0;
 
-// 	printf("or = %lu %s\n", strlcat(or_s1, s2, len), or_s1);
-// 	printf("ft = %lu %s\n", ft_strlcat(ft_s1, s2, len), ft_s1);
+// 	printf("or = %lu %s\n", strlcat("42", NULL, len), or_s1);
+
+// 	printf("ft = %lu %s\n", ft_strlcat("42", NULL, len), ft_s1);
 
 // 	char *dst1 = calloc(100, sizeof(char));
 // 	char *dst2 = calloc(100, sizeof(char));

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:01:19 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 17:49:17 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 11:29:48 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,30 +16,32 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	len;
+	size_t	src_len;
 	size_t	i;
 
-	len = ft_strlen(src);
+	src_len = ft_strlen(src);
 	if (dstsize == 0)
-		return (len);
+		return (src_len);
 	i = 0;
-	while (i < dstsize - 1)
+	while (i < dstsize - 1 && src[i])
 	{
 		dst[i] = src[i];
 		i++;
 	}
 	dst[i] = '\0';
-	return (len);
+	return (src_len);
 }
 
-int main(void)
-{
-	char or_dest[] = "";
-	char ft_dest[] = "";
-	char src[] = "zzzzzzzzz";
-
-	size_t len = 6;
-	printf("or = %lu %s\n\n", strlcpy(or_dest, src, len), or_dest);
-	printf("ft = %lu %s\n\n", ft_strlcpy(ft_dest, src, len), ft_dest);
-
-}
+// int main(void)
+// {
+// 	char or_dest[10] = "aaaaaaaa";
+// 	char ft_dest[10] = "aaaaaaaa";
+// 	char src[] = "zzzz";
+// 	size_t dstsize = 10;
+// 	printf("or = %lu %s\n\n", strlcpy(or_dest, src, dstsize), or_dest);
+// 	for(int i = 0; i < dstsize; i++)
+// 		printf("%c\n", or_dest[i]);
+// 	printf("ft = %lu %s\n\n", ft_strlcpy(ft_dest, src, dstsize), ft_dest);
+// 	for(int i = 0; i < dstsize; i++)
+// 		printf("%c\n", ft_dest[i]);
+// }
