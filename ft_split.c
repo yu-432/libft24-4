@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/28 19:00:16 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 15:30:15 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,24 @@ int	count_words(const char *s, char c)
 	return (count);
 }
 
+int	word_len(const char *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != c && s[i])
+		i++;
+	return (i);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
 	int		index;
 	int		i;
-	int		j;
 
+	if (!s)
+		return (NULL);
 	result = (char **)malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
@@ -66,11 +77,8 @@ char	**ft_split(char const *s, char c)
 			i++;
 		else
 		{
-			j = 0;
-			while (s[i + j] != c && s[i + j] != '\0')
-				j++;
-			result[index++] = ft_strndup(&s[i], j);
-			i += j;
+			result[index++] = ft_strndup(&s[i], word_len(s + i, c));
+			i += word_len(s + i, c);
 		}
 	}
 	result[index] = NULL;
@@ -98,4 +106,9 @@ char	**ft_split(char const *s, char c)
 // 	res = ft_split(r, c1);
 // 	for (int i = 0; i < count_words(r, c1) + 1; i++)
 // 		printf("%s\n", res[i]);
+
+// 	res = ft_split("\0aa\0bbb", '\0');
+// 	for (int i = 0; i < count_words(r, c1) + 1; i++)
+// 		printf("%s\n", res[i]);
+
 // }

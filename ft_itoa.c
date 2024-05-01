@@ -6,12 +6,13 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:04:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/26 18:22:41 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 16:53:12 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "libft.h"
 
 static int	nb_len(int n)
 {
@@ -30,28 +31,13 @@ static int	nb_len(int n)
 	return (len);
 }
 
-static char	*alllocate_str(int len)
+static char	*set_nb(char *result, int n)
 {
-	char	*str;
+	int	len;
 
-	str = (char *)malloc(len + 1 * sizeof(char *));
-	if (!str)
-		return (NULL);
-	return (str);
-}
-
-char	*ft_itoa(int n)
-{
-	char	*result;
-	int		len;
-
-	if (n == -2147483648)
-	{
-		result = alllocate_str(11);
-		return (result = "-2147483648\0");
-	}
 	len = nb_len(n);
-	result = alllocate_str(len);
+	if (!result)
+		return (NULL);
 	result[len] = '\0';
 	if (n < 0)
 	{
@@ -66,6 +52,25 @@ char	*ft_itoa(int n)
 			break ;
 		len--;
 	}
+	return (result);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*result;
+
+	if (n == -2147483648)
+	{
+		result = (char *)malloc(13 * sizeof(char));
+		if (!result)
+			return (NULL);
+		ft_strlcpy(result, "-2147483648", 13);
+		return (result);
+	}
+	result = (char *)malloc(nb_len(n) + 1);
+	if (!result)
+		return (NULL);
+	set_nb(result, n);
 	return (result);
 }
 

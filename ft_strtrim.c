@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:38:52 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/28 17:38:23 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 15:37:47 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,25 +41,31 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		head;
 	int		end;
+	int		len;
 	char	*value;
 
+	if (!s1 || !set)
+		return (NULL);
 	head = 0;
 	while (char_mach_head((char *)set, s1[head]))
 		head++;
 	end = strlen(s1);
 	while (char_mach_end((char *)set, s1[end - 1]))
 		end--;
-	value = (char *)malloc((end - head + 1) * sizeof(char));
+	len = end - head;
+	if (len < 0)
+		len = 0;
+	value = (char *)malloc((len + 1) * sizeof(char));
 	if (value == NULL)
 		return (NULL);
-	ft_memcpy(value, s1 + head, end - head);
+	ft_memcpy(value, s1 + head, len);
 	value[end - head] = '\0';
 	return (value);
 }
 
 // int main(void)
 // {
-// 	char str[] = "Hello World";
-// 	char trim[] = "World";
+// 	char str[] = "    ";
+// 	char trim[] = " ";
 // 	printf("%s\n", ft_strtrim(str, trim));
 // }
