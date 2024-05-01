@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:34:01 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 12:01:02 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 17:12:29 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (1)
-	{
-		if (lst -> next == NULL)
-			break ;
+	if (!lst)
+		return (NULL);
+	while (lst -> next)
 		lst = lst -> next;
-	}
 	return (lst);
 }
 

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 13:12:55 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 17:50:04 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:09:06 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,16 @@
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
-	t_list	*node;
 
-	if (*lst == NULL)
+	if (!lst || !del)
 		return ;
-	node = *lst;
-	while (1)
+	while (*lst)
 	{
-		temp = node -> next;
-		ft_lstdelone(node, del);
+		temp = (*lst) -> next;
+		ft_lstdelone(*lst, del);
 		if (temp == NULL)
 			break ;
-		node = temp;
+		*lst = temp;
 	}
 	*lst = NULL;
 }

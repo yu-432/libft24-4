@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:38:17 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 14:50:12 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 17:20:15 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (lst == NULL)
+	if (!lst || !f)
 		return ;
 	while (1)
 	{
-		f(lst);
+		f(lst -> content);
 		if (lst -> next == NULL)
 			break ;
 		lst = lst -> next;

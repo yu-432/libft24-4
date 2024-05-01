@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:21:31 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/28 16:32:06 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/01 17:44:35 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_calloc(size_t count, size_t size)
 		if (!ptr)
 			return (NULL);
 	}
-	else if (LONG_MAX / size < count)
+	else if (SIZE_MAX / size < count)
 		return (NULL);
 	else
 	{
