@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:18:41 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/29 10:54:02 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:55:08 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <limits.h>
+#include <unistd.h>
+# include <stdio.h>
 
 typedef struct s_list
 {

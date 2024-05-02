@@ -6,13 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:03:44 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 12:18:27 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:59:12 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -42,6 +39,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
+// #include <stdio.h>
+// #include <stdlib.h>
+// #include <string.h>
 // int main(void)
 // {
 // 	char str[] = "Hello-42-Tokyo";

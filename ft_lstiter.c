@@ -6,12 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:38:17 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 17:20:15 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:52:38 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
@@ -25,6 +24,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst -> next;
 	}
 }
+
+// #include <stdio.h>
 
 // void	f(void *lst)
 // {

@@ -6,12 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:34:01 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 17:12:29 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:52:45 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstlast(t_list *lst)
 {
@@ -21,6 +20,8 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst -> next;
 	return (lst);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

@@ -6,14 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:39:11 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 12:29:51 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:57:28 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
-#include <string.h>
-#include <stdlib.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -37,6 +34,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
+//#include <stdio.h>
+//#include <string.h>
 // int main(void)
 // {
 // 	char or_s1[10] = "aaa";

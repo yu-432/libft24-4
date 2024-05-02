@@ -6,14 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:21:31 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:06:57 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:49:54 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
-#include <limits.h>
 #include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -38,6 +34,8 @@ void	*ft_calloc(size_t count, size_t size)
 	return (ptr);
 }
 
+// #include <string.h>
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	void	*ptr1 = calloc(0, 0);

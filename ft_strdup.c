@@ -6,13 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:44:37 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 17:06:31 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:00:07 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)
@@ -24,10 +21,13 @@ char	*ft_strdup(const char *s1)
 	s_cpy = (char *)malloc((len + 1) * sizeof(char));
 	if (s_cpy == NULL)
 		return (NULL);
-	memcpy(s_cpy, s1, len +1);
+	ft_memcpy(s_cpy, s1, len +1);
 	return (s_cpy);
 }
 
+// #include <string.h>
+// #include <stdlib.h>
+// #include <stdio.h>
 // int main(void)
 // {
 // 	char str1[] = "abcedfghijklmn";

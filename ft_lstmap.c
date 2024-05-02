@@ -6,12 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:50:46 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:06:25 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:47:20 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -37,6 +36,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
+
+//#include <stdio.h>
 
 // void	del(void *content)
 // {

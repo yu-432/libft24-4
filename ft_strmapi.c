@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 13:16:33 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 16:55:57 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:57:55 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -36,6 +34,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
+
+// #include <stdlib.h>
+// #include <stdio.h>
 // char	f(unsigned int i, char c)
 // {
 //	if (i % 2 ==0)

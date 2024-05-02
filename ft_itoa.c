@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:04:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 16:53:12 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:50:44 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 static int	nb_len(int n)
@@ -74,6 +72,7 @@ char	*ft_itoa(int n)
 	return (result);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 // 	printf("%s\n", ft_itoa(2147483647));

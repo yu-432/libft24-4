@@ -6,13 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:38:52 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 12:37:53 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:00:31 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	char_mach_head(char *s, int c)
@@ -46,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (char_mach_head((char *)set, *s1))
 		s1++;
-	len = strlen(s1);
+	len = ft_strlen(s1);
 	while (char_mach_end((char *)set, s1[len - 1]))
 		len--;
 	if (len < 0)
@@ -55,6 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (value);
 }
 
+// #include <stdio.h>
 // int main(void)
 // {
 // 	char str[] = "a";

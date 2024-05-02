@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 15:30:15 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:55:57 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strndup(const char *s1, int len)
@@ -85,6 +83,7 @@ char	**ft_split(char const *s, char c)
 	return (result);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	char *s = "hello,world,42,tokyo";

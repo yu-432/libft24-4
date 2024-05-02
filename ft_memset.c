@@ -6,15 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 13:05:00 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 17:06:20 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:54:38 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
-
-//エラー処理が必要？？strlenが文字列の長さ(\0含む)を超えた場合
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -29,6 +25,8 @@ void	*ft_memset(void *b, int c, size_t len)
 	return (b);
 }
 
+// #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
 // 	char or[] = "aaaaaaa";

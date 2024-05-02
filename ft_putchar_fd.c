@@ -6,11 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 15:41:34 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/26 18:22:52 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:55:04 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 void ft_putchar_fd(char c, int fd)
 {

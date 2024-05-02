@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:57:32 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/24 17:06:05 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:53:35 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -31,6 +29,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
+//#include <string.h>
+//
 // int main(void)
 // {
 // 	// char s1[] = "abcd";

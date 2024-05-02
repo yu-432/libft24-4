@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:03:57 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/27 16:33:20 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:56:08 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
@@ -30,6 +28,8 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
+// #include <string.h>
+// #include <stdio.h>
 // int main(void)
 // {
 // 	char str1[] = "abcdefg";

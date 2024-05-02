@@ -6,11 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 14:53:32 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 17:19:17 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:56:45 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -26,6 +26,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
+// #include <stdio.h>
 // void	f(unsigned int i, char *c)
 // {
 // 	if (i % 2 == 0)

@@ -6,12 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:42:16 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:07:45 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:53:09 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_lstsize(t_list *lst)
 {
@@ -29,6 +28,8 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
+
+// #include <stdio.h>
 
 // int	main(void)
 // {

@@ -6,11 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 15:21:37 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/17 15:27:33 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:59:23 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 int	ft_tolower(int c)

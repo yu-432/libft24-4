@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:29:05 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 17:05:37 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:53:26 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -28,6 +26,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (0);
 }
 
+//#include <stdio.h>
 // int main(void)
 // {
 // 	char s1[] = "543345";

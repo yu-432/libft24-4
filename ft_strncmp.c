@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:25:51 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 11:30:09 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:58:08 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -30,6 +28,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
+
+// #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
 // 	char s1[] = "\0";

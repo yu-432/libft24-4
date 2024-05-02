@@ -6,12 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 17:50:36 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/28 19:10:11 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:55:30 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <limits.h>
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

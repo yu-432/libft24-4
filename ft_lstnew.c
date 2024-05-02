@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:32:14 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/29 15:14:31 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:53:03 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
@@ -26,6 +24,7 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 
+//#include <stdio.h>
 // int	main(void)
 // {
 // 	t_list *p;

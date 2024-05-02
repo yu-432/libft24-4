@@ -6,12 +6,11 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 12:17:50 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 17:14:24 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:52:31 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
@@ -21,11 +20,11 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	free(lst);
 }
 
+// #include <stdio.h>
 // void	del(void *content)
 // {
 // 	free(content);
 // }
-
 // int main(void)
 // {
 // 	t_list *p;
@@ -35,9 +34,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 // 	char *data1 = ft_strdup("abc");
 // 	char *data2 = ft_strdup("def");
 // 	char *data3 = ft_strdup("ghi");
-
 // 	p = ft_lstnew(data1);
-
 // 	pp = ft_lstnew(data2);
 // 	ft_lstadd_front(&p, pp);
 

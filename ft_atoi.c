@@ -6,13 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:12:54 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/28 15:42:34 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:49:02 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
 #include "libft.h"
 
 long	long_overflow(int sign, const char *str)
@@ -52,6 +49,8 @@ int	ft_atoi(const char *str)
 	return (value * sign);
 }
 
+
+// #include <stdio.h>
 // int main(void)
 // {
 // 	char i1[] = "9234567876543234568";

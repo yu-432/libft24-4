@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:36:19 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:48:29 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:49:28 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -27,6 +25,8 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
+// #include <string.h>
+// #icnlude <stdio.h>
 // int main(void)
 // {
 // 	char or[] = "afuhweufhiufhusfhwiufsijfs";

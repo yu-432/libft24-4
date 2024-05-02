@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:48:21 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:56:15 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:54:09 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
@@ -33,6 +31,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
+
+//#include <stdio.h>
+//#include <string.h>
 // int main(void)
 // {
 // 	char or_dest[] = "aaaA";

@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:41:09 by yooshima          #+#    #+#             */
-/*   Updated: 2024/04/30 16:59:48 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:54:22 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
@@ -39,6 +37,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	return (dest);
 }
 
+// #include <string.h>
+// #include <stdio.h>
 // int main(void)
 // {
 // 	size_t n = 4;

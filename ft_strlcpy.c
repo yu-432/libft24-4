@@ -6,12 +6,10 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:01:19 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 11:29:48 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:57:41 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
@@ -32,6 +30,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (src_len);
 }
 
+
+// #include <string.h>
+// #include <stdio.h>
 // int main(void)
 // {
 // 	char or_dest[10] = "aaaaaaaa";
