@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 19:21:31 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 17:44:35 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 13:06:57 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,12 @@ void	*ft_calloc(size_t count, size_t size)
 // 		free(ptr3);
 // 	}
 
-// 	void	*ptr4 = ft_calloc((size_t)SIZE_MAX / 10 + (size_t)1, 100);
+// 	void	*ptr4 = ft_calloc(INT_MIN, INT_MIN);
+// 	void	*ptr5 = calloc(INT_MIN, INT_MIN);
 
-// 	if (ptr4 == NULL)
-// 		printf("calloc = NULL\n");
-// 	else
-// 	{
-// 		printf("ft_calloc = %p\n", ptr4);
-// 		free(ptr4);
-// 	}
+
+// printf("aft_calloc = %p\n", ptr4);
+// printf("acalloc = %p\n", ptr5);
+
 // }
 

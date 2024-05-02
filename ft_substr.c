@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:03:44 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 15:39:28 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 12:18:27 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,23 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char			*substr;
-	unsigned int	i;
+	char	*substr;
+	size_t	sub_len;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
 	else if (ft_strlen(s) <= start || len == 0)
-	{
-		substr = (char *)malloc(1);
-		if (substr == NULL)
-			return (NULL);
-		*substr = 0;
-		return (substr);
-	}
-	substr = (char *)malloc((len + 1) * sizeof(char));
+		sub_len = 0;
+	else if (ft_strlen(s) > start + len)
+		sub_len = len;
+	else
+		sub_len = ft_strlen(s) - start;
+	substr = (char *)malloc((sub_len + 1) * sizeof(char));
 	if (substr == NULL)
 		return (NULL);
 	i = 0;
-	while (i < len)
+	while (i < sub_len)
 	{
 		substr[i] = s[start + i];
 		i++;
@@ -49,6 +48,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	unsigned int set = 2;
 // 	size_t str_len = strlen(str);
 // 	char *value = ft_substr(str, 15, 5);
+// 	printf("%s\n", value);
+// 	free(value);
+// 	value = ft_substr("tripouille", 1, 1);
 // 	printf("%s\n", value);
 // 	free(value);
 // }

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:38:52 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/01 15:37:47 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 12:37:53 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,33 +39,25 @@ int	char_mach_end(char *s, int c)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		head;
-	int		end;
 	int		len;
 	char	*value;
 
 	if (!s1 || !set)
 		return (NULL);
-	head = 0;
-	while (char_mach_head((char *)set, s1[head]))
-		head++;
-	end = strlen(s1);
-	while (char_mach_end((char *)set, s1[end - 1]))
-		end--;
-	len = end - head;
+	while (char_mach_head((char *)set, *s1))
+		s1++;
+	len = strlen(s1);
+	while (char_mach_end((char *)set, s1[len - 1]))
+		len--;
 	if (len < 0)
 		len = 0;
-	value = (char *)malloc((len + 1) * sizeof(char));
-	if (value == NULL)
-		return (NULL);
-	ft_memcpy(value, s1 + head, len);
-	value[end - head] = '\0';
+	value = ft_substr(s1, 0, len);
 	return (value);
 }
 
 // int main(void)
 // {
-// 	char str[] = "    ";
-// 	char trim[] = " ";
+// 	char str[] = "a";
+// 	char trim[] = "a";
 // 	printf("%s\n", ft_strtrim(str, trim));
 // }
