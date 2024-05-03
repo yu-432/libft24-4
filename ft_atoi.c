@@ -6,13 +6,13 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:12:54 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 11:28:56 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:21:01 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long	long_overflow(int sign, const char *str)
+static long	long_overflow(int sign, const char *str)
 {
 	long	temp;
 	long	value;

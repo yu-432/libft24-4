@@ -1,6 +1,3 @@
 *.a
 *.o
 *.out
-libft-tester-tokyo
-libftTester
-libft-unit-test

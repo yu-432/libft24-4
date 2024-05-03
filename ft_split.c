@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 11:33:55 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 14:21:44 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static int	word_len(const char *s, char c)
 	return (i);
 }
 
-char	**all_free(char **result, int index)
+static char	**all_free(char **result, int index)
 {
 	while (index--)
 		free(result[index]);
