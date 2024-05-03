@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:32:14 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:53:03 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:32:58 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,3 @@ t_list	*ft_lstnew(void *content)
 // 	p = ft_lstnew(data1);
 // 	printf("%s\n", p -> content);
 // }
-

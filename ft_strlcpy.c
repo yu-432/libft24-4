@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:01:19 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:57:41 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:34:12 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-
 
 // #include <string.h>
 // #include <stdio.h>

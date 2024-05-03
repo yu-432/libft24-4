@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 14:18:41 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:55:08 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:35:28 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <limits.h>
-#include <unistd.h>
+# include <unistd.h>
 # include <stdio.h>
 
 typedef struct s_list
@@ -23,7 +23,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }	t_list;
-
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

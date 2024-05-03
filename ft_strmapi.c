@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 13:16:33 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:57:55 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:34:27 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (result);
 }
 
-
 // #include <stdlib.h>
 // #include <stdio.h>
 // char	f(unsigned int i, char c)
@@ -47,11 +46,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // {
 // 	char str[] = "abcdefg";
 // 	printf("%s = %s\n", str, ft_strmapi(str, f));
-
 // }
-
-
-
 
 // char plus_one(unsigned int i, char c){
 // 	return c + 1;
@@ -61,5 +56,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // 	char * str = "1234";
 // 	for i in str
 // 		i = plus_one(i);
-
 // }

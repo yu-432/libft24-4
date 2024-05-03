@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 18:41:09 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:54:22 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:22:52 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,8 +44,8 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 // 	size_t n = 4;
 // 	char or_dest[] = "abcdef";
 // 	char or_src[] = "bbbbbbbb";
-// 	printf("or_dest = %s\n", memmove(NULL, or_src, n));
+// 	printf("or_dest = %s\n", memmove(or_dest + 2, or_dest, n));
 // 	char ft_dest[] = "abcdef";
-// 	char ft_src[] = "bbbbbbbb";
-// 	printf("ft_dest = %s\n", ft_memmove(NULL, ft_src, n));
+// 	char ft_src[] = "123456";
+// 	printf("ft_dest = %s\n", ft_memmove(ft_dest + 2, ft_dest, n));
 // }

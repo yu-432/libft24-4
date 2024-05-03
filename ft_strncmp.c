@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 16:25:51 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:58:08 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:34:44 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
-
 
 // #include <stdio.h>
 // #include <string.h>

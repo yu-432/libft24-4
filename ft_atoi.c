@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:12:54 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:49:02 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:28:56 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *str)
 	sign = 1;
 	value = 0;
 	while (*str == '\t' || *str == '\n' || *str == '\v'
-		|| *str == '\f' ||*str == '\r' || *str == ' ')
+		|| *str == '\f' || *str == '\r' || *str == ' ')
 		str++;
 	if (*str == '-')
 		sign = -1;
@@ -48,7 +48,6 @@ int	ft_atoi(const char *str)
 	value = (int)long_overflow(sign, str);
 	return (value * sign);
 }
-
 
 // #include <stdio.h>
 // int main(void)
@@ -79,6 +78,4 @@ int	ft_atoi(const char *str)
 // 	printf("%d, %d\n", atoi(i4), ft_atoi(i4));
 // 	printf("%d, %d\n", atoi(i5), ft_atoi(i5));
 // 	printf("%d, %d\n", atoi(i6), ft_atoi(i6));
-// 	printf("%d, %d\n", atoi("9223372036854775806"), ft_atoi("9223372036854775806"));
-// 	printf("%d %d\n", atoi("-9223372036854775807"), ft_atoi("-9223372036854775807"));
 // }

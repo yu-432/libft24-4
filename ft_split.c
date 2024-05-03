@@ -6,13 +6,13 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:55:57 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:33:55 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strndup(const char *s1, int len)
+static char	*ft_strndup(const char *s1, int len)
 {
 	char	*s_cpy;
 
@@ -25,7 +25,7 @@ char	*ft_strndup(const char *s1, int len)
 	return (s_cpy);
 }
 
-int	count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	flag;
 	int	count;
@@ -46,7 +46,7 @@ int	count_words(const char *s, char c)
 	return (count);
 }
 
-int	word_len(const char *s, char c)
+static int	word_len(const char *s, char c)
 {
 	int	i;
 
@@ -54,6 +54,14 @@ int	word_len(const char *s, char c)
 	while (s[i] != c && s[i])
 		i++;
 	return (i);
+}
+
+char	**all_free(char **result, int index)
+{
+	while (index--)
+		free(result[index]);
+	free(result);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -76,6 +84,8 @@ char	**ft_split(char const *s, char c)
 		else
 		{
 			result[index++] = ft_strndup(&s[i], word_len(s + i, c));
+			if (result[index - 1] == NULL)
+				return (all_free(result, index));
 			i += word_len(s + i, c);
 		}
 	}
@@ -97,7 +107,7 @@ char	**ft_split(char const *s, char c)
 // 	printf("%d\n", count_words(s, c));
 // 	for (int i = 0; i < count_words(s, c) + 1; i++)
 // 		printf("%s\n", res[i]);
-	
+
 // 	res = ft_split(t, c);
 // 	for (int i = 0; i < count_words(t, c) + 1; i++)
 // 		printf("%s\n", res[i]);

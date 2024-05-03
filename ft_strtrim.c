@@ -6,13 +6,13 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:38:52 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 14:00:31 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 18:20:27 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	char_mach_head(char *s, int c)
+static int	char_mach_head(char *s, int c)
 {
 	while (*s)
 	{
@@ -23,7 +23,7 @@ int	char_mach_head(char *s, int c)
 	return (0);
 }
 
-int	char_mach_end(char *s, int c)
+static int	char_mach_end(char *s, int c)
 {
 	int	len;
 

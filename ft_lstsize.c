@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:42:16 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:53:09 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:33:11 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (0);
 	count = 1;
-	while (1)
+	while (lst -> next)
 	{
-		if (lst -> next == NULL)
-			break ;
 		count++;
 		lst = lst -> next;
 	}
@@ -54,4 +52,3 @@ int	ft_lstsize(t_list *lst)
 // 		p = p -> next;
 // 	}
 // }
-

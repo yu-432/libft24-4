@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:36:19 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:49:28 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 14:53:05 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@ void	ft_bzero(void *s, size_t n)
 	char	*str;
 
 	str = s;
-	while (n > 0)
+	while (n--)
 	{
 		*str = 0;
 		str++;
-		n--;
 	}
 }
 

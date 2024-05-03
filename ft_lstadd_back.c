@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:49:46 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:51:11 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:31:26 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,10 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*temp;
-
 	if (*lst == NULL)
 		*lst = new;
 	else
-	{
-		temp = *lst;
-		while (temp -> next != NULL)
-			temp = temp -> next;
-		temp -> next = new;
-	}
+		ft_lstlast(*lst)->next = new;
 }
 
 // #include <stdio.h>

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:37:07 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:58:19 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/03 11:34:54 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (NULL);
 }
-
 
 // #include <string.h>
 // #include <stdio.h>

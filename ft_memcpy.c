@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:48:21 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:54:09 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/02 15:08:33 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,17 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-
-//#include <stdio.h>
-//#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
 // 	char or_dest[] = "aaaA";
 // 	char or_src[] = "bbbb";
 // 	char ft_dest[] = "aaaA";
 // 	char ft_src[] = "bbbb";
-// 	int n = 3;
+// 	int n = 0;
 // 	printf("or = %s\n", or_dest);
-// 	printf("or = %s\n", memcpy(NULL, or_src, n));
+// 	printf("or = %s\n", memcpy(or_dest, or_src, n));
 // 	printf("ft = %s\n", ft_dest);
 // 	printf("ft = %s\n", ft_memcpy(NULL, ft_src, n));
-
 // }
