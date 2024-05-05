@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:03:57 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 15:40:14 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:47:09 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-// #include <string.h>
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char str1[] = "abcdefg";
-// 	int find = 'c' + 256;
-// 	printf("or = %s\n", strchr(str1, find));
-// 	printf("ft = %s\n", ft_strchr(str1, find));
-// }

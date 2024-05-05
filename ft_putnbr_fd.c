@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 17:50:36 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:55:30 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:46:53 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,3 @@ void	ft_putnbr_fd(int n, int fd)
 	write (fd, &a, 1);
 	return ;
 }
-
-// int main(void)
-// {
-// 	ft_putnbr_fd(0, 1);
-// 	ft_putnbr_fd(1, 1);
-// 	ft_putnbr_fd(-1, 1);
-// 	ft_putnbr_fd(42, 1);
-// 	ft_putnbr_fd(-42, 1);
-// 	ft_putnbr_fd(INT_MAX, 1);
-// 	ft_putnbr_fd(INT_MIN, 1);
-// 	ft_putnbr_fd(INT_MAX - 1, 1);
-// 	ft_putnbr_fd(INT_MIN + 1, 1);
-// }

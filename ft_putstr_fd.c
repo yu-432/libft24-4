@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 17:11:10 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:55:38 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:46:56 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-// int main(void)
-// {
-// 	char str[] = "abcdef";
-// 	ft_putstr_fd(str, 1);
-// }

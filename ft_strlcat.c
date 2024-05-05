@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 12:39:11 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:57:28 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:47:31 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,33 +33,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-
-//#include <stdio.h>
-//#include <string.h>
-// int main(void)
-// {
-// 	char or_s1[10] = "aaa";
-// 	char ft_s1[10] = "aaa";
-
-// 	char s2[] = "bbbbb";
-// 	size_t len = 0;
-
-// 	printf("or = %lu %s\n", strlcat("42", NULL, len), or_s1);
-
-// 	printf("ft = %lu %s\n", ft_strlcat("42", NULL, len), ft_s1);
-
-// 	char *dst1 = calloc(100, sizeof(char));
-// 	char *dst2 = calloc(100, sizeof(char));
-
-// 	char *src1 = calloc(100, sizeof(char));
-// 	char *src2 = calloc(100, sizeof(char));
-// 	for (int i = 0; i < 99; i++)
-// 	{
-// 		src1[i] = i + 1;
-// 		src2[i] = i + 1;
-// 	}
-
-// 	printf("or = %lu %s\n", strlcat(dst1, src1, len), dst1);
-// 	printf("ft = %lu %s\n", ft_strlcat(dst2, src2, len), dst2);
-
-// }

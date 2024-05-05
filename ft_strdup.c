@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:44:37 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 14:00:07 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:47:13 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,3 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(s_cpy, s1, len +1);
 	return (s_cpy);
 }
-
-// #include <string.h>
-// #include <stdlib.h>
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char str1[] = "abcedfghijklmn";
-// 	char *or_ptr, *ft_ptr;
-// 	or_ptr = strdup(str1);
-// 	ft_ptr = ft_strdup(str1);
-// 	printf("%s, %p or-> %s, %p\n", str1, str1, or_ptr, or_ptr);
-// 	printf("%s, %p or-> %s, %p\n", str1, str1, ft_ptr, ft_ptr);
-// 	free(or_ptr);
-// 	free(ft_ptr);
-// 	}

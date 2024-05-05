@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:03:44 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:59:12 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:48:06 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,19 +38,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
-// int main(void)
-// {
-// 	char str[] = "Hello-42-Tokyo";
-// 	unsigned int set = 2;
-// 	size_t str_len = strlen(str);
-// 	char *value = ft_substr(str, 15, 5);
-// 	printf("%s\n", value);
-// 	free(value);
-// 	value = ft_substr("tripouille", 1, 1);
-// 	printf("%s\n", value);
-// 	free(value);
-// }

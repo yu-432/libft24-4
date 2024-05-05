@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:49:46 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 11:31:26 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:42:06 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		ft_lstlast(*lst)->next = new;
 }
-
-// #include <stdio.h>
-// 
-// int main(void)
-// {
-// 	t_list *p;
-// 	t_list *pp;
-// 	t_list *ppp;
-// 	t_list *add;
-// 	char *data1 = "abc";
-// 	char *data2 = "def";
-// 	char *data3 = "ghi";
-// 	char *data4 = "zzz";
-// 	p = ft_lstnew(data1);
-// 	pp = ft_lstnew(data2);
-// 	ft_lstadd_front(&p, pp);
-// 	ppp = ft_lstnew(data3);
-// 	ft_lstadd_front(&p, ppp);
-// 	add = ft_lstnew(data4);
-// 	t_list *last = ft_lstlast(p);
-// 	ft_lstadd_back(&last, add);
-// 	for(int i = 0; i < 4; i++)
-// 	{
-// 		printf("%s\n", p -> content);
-// 		p = p -> next;
-// 	}
-// }

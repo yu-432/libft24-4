@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 11:01:19 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 11:34:12 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:47:35 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,19 +29,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char or_dest[10] = "aaaaaaaa";
-// 	char ft_dest[10] = "aaaaaaaa";
-// 	char src[] = "zzzz";
-// 	size_t dstsize = 10;
-// 	printf("or = %lu %s\n\n", strlcpy(or_dest, src, dstsize), or_dest);
-// 	for(int i = 0; i < dstsize; i++)
-// 		printf("%c\n", or_dest[i]);
-// 	printf("ft = %lu %s\n\n", ft_strlcpy(ft_dest, src, dstsize), ft_dest);
-// 	for(int i = 0; i < dstsize; i++)
-// 		printf("%c\n", ft_dest[i]);
-// }

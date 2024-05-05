@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 16:38:52 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 18:20:27 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:48:01 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	value = ft_substr(s1, 0, len);
 	return (value);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char str[] = "a";
-// 	char trim[] = "a";
-// 	printf("%s\n", ft_strtrim(str, trim));
-// }

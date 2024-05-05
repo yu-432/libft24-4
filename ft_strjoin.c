@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:56:00 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 18:01:17 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:47:25 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(value + s1_len, s2, s2_len + 1);
 	return (value);
 }
-
-// #include <string.h>
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	char str1[] = "abcdeff";
-// 	char str2[] = "ghi";
-
-// 	printf("%s\n", ft_strjoin(str1, str2));
-// }

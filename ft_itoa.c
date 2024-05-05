@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 11:04:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:50:44 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:41:59 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ char	*ft_itoa(int n)
 
 	if (n == -2147483648)
 	{
-		result = (char *)malloc(13 * sizeof(char));
+		result = (char *)malloc(12 * sizeof(char));
 		if (!result)
 			return (NULL);
-		ft_strlcpy(result, "-2147483648", 13);
+		ft_strlcpy(result, "-2147483648", 12);
 		return (result);
 	}
 	result = (char *)malloc(nb_len(n) + 1);
@@ -71,12 +71,3 @@ char	*ft_itoa(int n)
 	set_nb(result, n);
 	return (result);
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	printf("%s\n", ft_itoa(2147483647));
-// 	printf("%s\n", ft_itoa(-2147483648));
-// 	printf("%s\n", ft_itoa(0));
-// 	printf("%s\n", ft_itoa(-2147483647));
-// }

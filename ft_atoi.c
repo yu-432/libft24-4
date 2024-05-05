@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 17:12:54 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 14:21:01 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:41:11 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,37 +45,6 @@ int	ft_atoi(const char *str)
 		sign = -1;
 	if (*str == '-' || *str == '+')
 		str++;
-	value = (int)long_overflow(sign, str);
-	return (value * sign);
+	value = long_overflow(sign, str);
+	return ((int)(value * sign));
 }
-
-// #include <stdio.h>
-// int main(void)
-// {
-// 	char i1[] = "9234567876543234568";
-// 	char i2[] = "-9234567876543234568";
-// 	char i3[] = "18446744073709551616";
-// 	char i4[] = "18446744073709551616";
-// 	char i5[] = "18446744073709551614";
-// 	char i6[] = "18446744073709551614";
-
-// 	printf("%ld\n%ld\n", LONG_MAX, LONG_MAX /10);
-
-// 	printf("%d %d\n", ft_atoi(""), atoi(""));
-// 	printf("%d %d\n",ft_atoi("-"), atoi("-"));
-// 	printf("%d %d\n",ft_atoi("+"), atoi("+"));
-// 	printf("%d %d\n",ft_atoi("0"), atoi("0"));
-// 	printf("%d %d\n",ft_atoi("-0"), atoi("-0"));
-// 	printf("%d %d\n",ft_atoi("+0"), atoi("+0"));
-// 	printf("%d %d\n",ft_atoi("1"), atoi("1"));
-// 	printf("%d %d\n",ft_atoi("-1"), atoi("-1"));
-// 	printf("%d %d\n",ft_atoi("+1"), atoi("+1"));
-// 	printf("%d %d\n",ft_atoi("7"), atoi("7"));
-// 	printf("%d %d\n",ft_atoi("-7"), atoi("-7"));
-// 	printf("%d, %d\n", atoi(i1), ft_atoi(i1));
-// 	printf("%d, %d\n", atoi(i2), ft_atoi(i2));
-// 	printf("%d, %d\n", atoi(i3), ft_atoi(i3));
-// 	printf("%d, %d\n", atoi(i4), ft_atoi(i4));
-// 	printf("%d, %d\n", atoi(i5), ft_atoi(i5));
-// 	printf("%d, %d\n", atoi(i6), ft_atoi(i6));
-// }

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 14:50:46 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/02 13:47:20 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:42:54 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,41 +36,3 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_lst);
 }
-
-//#include <stdio.h>
-
-// void	del(void *content)
-// {
-// 	free(content);
-// }
-
-// void	*f(void *lst)
-// {
-// 	t_list	*list;
-
-// 	list = lst;
-// 	list -> content = ft_strdup("zzz");
-// 	return (list);
-// }
-
-// int main(void)
-// {
-// 	t_list *new_node;
-// 	t_list *p;
-
-// 	p = ft_lstnew(ft_strdup("abc"));
-// 	ft_lstadd_front(&p, ft_lstnew(ft_strdup("def")));
-// 	ft_lstadd_front(&p, ft_lstnew(ft_strdup("ghi")));
-
-// 	// for (int i = 0; i < 3; i++)
-// 	// {
-// 	// 	printf("%s\n", p -> content);
-// 	// 	p = p -> next;
-// 	// }
-// 	new_node = ft_lstmap(p, f, del);
-// 	for (int i = 0; i < 3; i++)
-// 	{
-// 		printf("%s\n", new_node -> content);
-// 		new_node = new_node -> next;
-// 	}
-// }

@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 11:32:14 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 11:32:58 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:42:59 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,3 @@ t_list	*ft_lstnew(void *content)
 	new_node -> next = NULL;
 	return (new_node);
 }
-
-//#include <stdio.h>
-// int	main(void)
-// {
-// 	t_list *p;
-// 	char *data1 = "abc";
-// 	char *data2 = "def";
-// 	char *data3 = "ghi";
-
-// 	p = ft_lstnew(data1);
-// 	printf("%s\n", p -> content);
-// }

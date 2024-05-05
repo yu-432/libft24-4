@@ -6,7 +6,7 @@
 /*   By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 18:23:26 by yooshima          #+#    #+#             */
-/*   Updated: 2024/05/03 14:21:44 by yooshima         ###   ########.fr       */
+/*   Updated: 2024/05/05 11:47:06 by yooshima         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,32 +92,3 @@ char	**ft_split(char const *s, char c)
 	result[index] = NULL;
 	return (result);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char *s = "hello,world,42,tokyo";
-// 	char *t = ",,,hello,,,world,,,42,,,tokyo,,,,";
-// 	char *r = "hello,world,42,tokyo";
-// 	char c = ',';
-// 	char c1 = ' ';
-// 	char **res;
-
-// 	res = ft_split(s, c);
-// 	printf("%d\n", count_words(s, c));
-// 	for (int i = 0; i < count_words(s, c) + 1; i++)
-// 		printf("%s\n", res[i]);
-
-// 	res = ft_split(t, c);
-// 	for (int i = 0; i < count_words(t, c) + 1; i++)
-// 		printf("%s\n", res[i]);
-
-// 	res = ft_split(r, c1);
-// 	for (int i = 0; i < count_words(r, c1) + 1; i++)
-// 		printf("%s\n", res[i]);
-
-// 	res = ft_split("\0aa\0bbb", '\0');
-// 	for (int i = 0; i < count_words(r, c1) + 1; i++)
-// 		printf("%s\n", res[i]);
-
-// }
