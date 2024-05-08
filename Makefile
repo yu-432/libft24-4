@@ -6,7 +6,7 @@
 #    By: yooshima <yooshima@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 15:23:57 by yooshima          #+#    #+#              #
-#    Updated: 2024/05/05 11:52:25 by yooshima         ###   ########.fr        #
+#    Updated: 2024/05/08 10:31:07 by yooshima         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ BONUS_SRCS	= ft_lstadd_back.c ft_lstadd_front.c ft_lstclear.c ft_lstdelone.c \
 			ft_lstiter.c ft_lstlast.c ft_lstmap.c ft_lstnew.c ft_lstsize.c 
 
 OBJS		= ${SRCS:.c=.o}
-BONUS_OBJS		= ${BONUS_SRCS:.c=.o}
+BONUS_OBJS	= ${BONUS_SRCS:.c=.o}
 
 CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
